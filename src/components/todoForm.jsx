@@ -7,11 +7,12 @@ const TodoForm = ({ addTodo }) => {
   const handleFormSubmit = e => {
     e.preventDefault();
 
-    if (!value) alert("No blank input");
-    return;
+    if (!value) {
+      alert("No blank input");
+      return;
+    }
 
     addTodo(value);
-    alert(value);
     setValue("");
   };
 
